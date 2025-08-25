@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YHAZ — Servizi & Prezzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-light: #fff;
+  --fg-light: #000;
+  --muted-light: #555;
+  --border-light: #ccc;
+  --bg-dark: #000;
+  --fg-dark: #fff;
+  --muted-dark: #9a9a9a;
+  --border-dark: #111;
+  --primary: #fff;
+}
+
+@media(prefers-color-scheme: dark){
+  body{background:var(--bg-dark); color:var(--fg-dark);}
+  header, footer{border-color:var(--border-dark);}
+  .price{color:var(--fg-dark);}
+  a:hover{background:#111;color:#fff;}
+}
+@media(prefers-color-scheme: light){
+  body{background:var(--bg-light); color:var(--fg-light);}
+  header, footer{border-color:var(--border-light);}
+  .price{color:var(--fg-light);}
+  a:hover{background:#ddd;color:#000;}
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Space Mono', monospace;display:flex;flex-direction:column;min-height:100vh;}
+header, footer{text-align:center;padding:20px;border-bottom:1px solid;}
+footer{border-top:1px solid; border-bottom:none; font-size:12px; color:var(--muted-dark);}
+main{flex:1;padding:40px 20px;text-align:center;}
+h1{font-size:clamp(28px,5vw,56px); margin-bottom:24px; line-height:1.1;}
+h2{margin:20px 0 12px;}
+ul{list-style:none; margin-top:16px; padding:0;}
+li{margin:8px 0; font-size:16px;}
+.price{font-weight:700;}
+a{color:inherit;text-decoration:none;border:1px solid #222;padding:10px 16px;display:inline-block;margin-top:20px;transition:0.2s;}
+a:hover{transform:translateY(-2px);}
+</style>
+</head>
+<body>
+<header><h2>YAHWZ.IT — Servizi</h2></header>
+<main>
+<h1>Servizi & Prezzi</h1>
+
+<h2>Siti Web</h2>
+<ul>
+<li>Sito vetrina: <span class="price">€499</span></li>
+<li>Sito CMS personalizzato: <span class="price">€799</span></li>
+<li>E-commerce base: <span class="price">€899</span></li>
+</ul>
+
+<h2>App Mobile</h2>
+<ul>
+<li>iOS / Android: <span class="price">€1499</span></li>
+<li>App avanzate su misura: <span class="price">€2499</span></li>
+</ul>
+
+<h2>Digital Marketing</h2>
+<ul>
+<li>Pacchetto base: <span class="price">€299/mese</span></li>
+<li>Pacchetto avanzato: <span class="price">€499/mese</span></li>
+</ul>
+
+<h2>Altri Servizi</h2>
+<ul>
+<li>Brand Identity: <span class="price">€399</span></li>
+<li>Consulenza UX/UI: <span class="price">€199/ora</span></li>
+</ul>
+
+<a href="index.html">← Torna alla Home</a>
+</main>
+<footer>
+<div>© <span id="year"></span> YAHWZ.IT</div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
